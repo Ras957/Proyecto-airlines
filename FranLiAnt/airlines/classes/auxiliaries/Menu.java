@@ -201,7 +201,6 @@ public class Menu {
         	System.out.println("¿Quiere buscar un vuelo por escalas? S/N");
         	String sn = sc.next();
         	if (sn.equals("s") || sn.equals("S")) {
-                System.out.println("Los vuelos que debe coger son: ");
         		company.escalationFlight(origin,destiny);
         	}
             this.showMenu(); 
@@ -318,6 +317,7 @@ public class Menu {
         this.showMenu();
 	}
 
+	/** Avanza un dia y actualiza los vuelos a la semana siguiente */
     public void option11()throws Exception{
         this.company.today.nextDay();
         Flight tmp = null;
